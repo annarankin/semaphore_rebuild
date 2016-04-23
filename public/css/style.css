@@ -1,0 +1,78 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: blanchedalmond;
+  font-family: 'Raleway', sans-serif;
+}
+
+nav {
+  background-color: black;
+  text-align: center;
+  color: white;
+  padding: 1.5em;
+}
+nav a {
+  color: aqua;
+}
+
+.main {
+  max-width: 800px;
+  margin: 10px auto;
+  text-align: center;
+  background-color: white;
+  padding: 1em;
+}
+
+.main p {
+  padding: 1em;
+}
+
+.main p.passed {
+  background-color: lightgreen;
+}
+
+.main p.failed {
+  background-color: salmon;
+}
+
+.main p.pending {
+  background-color: deepskyblue;
+}
+
+.main .controls {
+  padding: 1em;
+  border: 1px solid green;
+  border-radius: 10px;
+  margin: 1em;
+  font-size: 24px;
+}
+.main .controls input, .main .controls button {
+  padding: 0 10px;
+  font-size: 20px;
+  width: 50px;
+  height: 50px;
+  border: none;
+  border-bottom: 2px solid darkgreen;
+  border-radius: 3px;
+  background-color: lightgreen;
+}
+.main .controls input {
+  padding-right: 0px;
+  padding-left: 15px;
+}
+.main .controls button:hover {
+  background-color: green;
+}
+
+.main .controls button:active {
+  background-color: white;
+  color: green;
+}
+
+button {
+  cursor: pointer;
+}

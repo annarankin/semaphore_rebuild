@@ -1,0 +1,16 @@
+<h2>
+  <pre><%= @branch.name %></pre>
+</h2>
+
+<div class="controls">
+  <input type="hidden" name="project_id" value="<%= @branch.project_hash_id %>">
+  <input type="hidden" name="branch_id" value="<%= @branch.id %>">
+  Rebuild <input type="number" name="build_repeats"> times!
+  <button id="rebuild-btn">Go</button>
+</div>
+
+<% @builds.each do |build| %>
+  <p class="<%= build.result %>">Build Number <%= build.build_number %>: <a href="<%= build.build_url %>"><%= build.result %></a></p>
+<% end %>
+
+<script src="/js/branch.js"></script>

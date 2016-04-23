@@ -1,0 +1,12 @@
+<h2>
+  <%= @project.name.capitalize %>
+</h2>
+
+<% @branches.each do |branch| %>
+  <p class="<%= details_for(branch).result %>">
+    <a href="/projects/<%= branch.project_hash_id %>/branches/<%= branch.id %>">
+      <%= branch.name %>
+    </a>
+    - <a href="<%= details_for(branch).branch_url %>"><%= details_for(branch).result %></a>
+  </p>
+<% end %>

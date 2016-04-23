@@ -1,0 +1,10 @@
+Here be your projects:
+
+<% @projects.each do |project| %>
+  <p>
+    <a href="/projects/<%= project.hash_id %>">
+      <%= project.name.capitalize %>
+    </a>
+     - <%= project.branches.length %> branches
+  </p>
+<% end %>
