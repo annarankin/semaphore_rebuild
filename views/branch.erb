@@ -10,7 +10,8 @@
 </div>
 
 <% @builds.each do |build| %>
-  <p class="<%= build.result %>">Build Number <%= build.build_number %>: <a href="<%= build.build_url %>"><%= build.result %></a></p>
+  <p class="<%= build.result %>">Build Number <%= build.build_number %>: <a href="<%= build.build_url %>"><%= build.result %></a> at <%= date_for(build) %></p>
+  <p class="commit-msg"><%= build.commit.message %></p>
 <% end %>
 
 <script src="/js/branch.js"></script>

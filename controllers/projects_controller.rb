@@ -1,5 +1,7 @@
 module App
   class ProjectsController < App::Server
+    include App::ViewHelpers
+
     get '/' do
       redirect '/'
     end

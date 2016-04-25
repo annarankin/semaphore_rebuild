@@ -1,6 +1,6 @@
 module App
-  class RebuildController < App::Server
-    post '/' do
+  class ApiController < App::Server
+    post '/rebuild' do
 
       # lol
       build_repeats.times do

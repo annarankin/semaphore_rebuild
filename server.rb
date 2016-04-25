@@ -1,6 +1,5 @@
 module App
   class Server < Sinatra::Base
-    include App::ViewHelpers
 
     register Sinatra::Reloader
 

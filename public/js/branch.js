@@ -1,3 +1,5 @@
+"use strict";
+
 function submitRebuildParams(event) {
   var params = $('.controls input').map(function mapParams(idx, el){
     var obj = {};
@@ -6,7 +8,7 @@ function submitRebuildParams(event) {
     return obj;
   });
 
-  var rebuildUrl = '/rebuild?' + $.param(params);
+  var rebuildUrl = '/api/rebuild?' + $.param(params);
 
   $.ajax({
     method: 'POST',
@@ -15,11 +17,11 @@ function submitRebuildParams(event) {
 }
 
 function setUpBranchPage() {
-  "use strict";
-
   console.log('You are playing a dangerous game.');
 
   var $button = $('#rebuild-btn');
 
   $button.on('click', submitRebuildParams);
 }
+
+setUpBranchPage();

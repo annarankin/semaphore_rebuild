@@ -29,6 +29,17 @@ nav a {
 
 .main p {
   padding: 1em;
+  border: 1px solid darkgrey;
+  border-bottom: none;
+}
+
+.main p.commit-msg {
+  padding: 0.25em;
+  background-color: lightgrey;
+  font-size: 10px;
+  border: 1px solid darkgrey;
+  border-top: none;
+  margin-bottom: 1em;
 }
 
 .main p.passed {

@@ -3,7 +3,6 @@ require 'dotenv'
 require 'httparty'
 require 'semaphoreapp'
 require 'pry'
-require 'sinatra/namespace'
 require "sinatra/reloader"
 
 # Load environmental variables
@@ -18,6 +17,7 @@ Dir[File.dirname(__FILE__) + '/services/*.rb'].each {|file| require file }
 Dir[File.dirname(__FILE__) + '/views/helpers/*.rb'].each {|file| require file }
 Dir[File.dirname(__FILE__) + '/controllers/*.rb'].each {|file| require file }
 
-map('/') { run App::Server }
+# Break out root/non-namespaced routes so we's can use view helpers
+map('/')         { run App::Server }
 map('/projects') { run App::ProjectsController }
-map('/rebuild')  { run App::RebuildController }
+map('/api')      { run App::ApiController }
